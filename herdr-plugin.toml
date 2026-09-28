@@ -1,0 +1,38 @@
+id = "jermen.auto-titles"
+name = "Automatic Titles"
+version = "0.4.0"
+min_herdr_version = "0.9.1"
+description = "Ticket window titles, agent task pane titles and directory fallbacks."
+platforms = ["linux", "macos"]
+
+[[startup]]
+command = ["python3", "auto_titles.py", "start"]
+
+[[events]]
+on = "pane.agent_detected"
+command = ["python3", "auto_titles.py", "start"]
+
+[[actions]]
+id = "start"
+title = "Start automatic titles"
+command = ["python3", "auto_titles.py", "start"]
+
+[[actions]]
+id = "stop"
+title = "Stop automatic titles"
+command = ["python3", "auto_titles.py", "stop"]
+
+[[actions]]
+id = "preview"
+title = "Preview automatic titles"
+command = ["python3", "auto_titles.py", "preview"]
+
+[[actions]]
+id = "restore"
+title = "Stop and restore previous titles"
+command = ["python3", "auto_titles.py", "restore"]
+
+[[actions]]
+id = "status"
+title = "Automatic titles health"
+command = ["python3", "auto_titles.py", "status"]

@@ -1,0 +1,11 @@
+{
+  "directory": "#2",
+  "prefix_number": true,
+  "max_window_length": 64,
+  "max_pane_length": 80,
+  "poll_seconds": 2,
+  "conversation_refresh_seconds": 180,
+  "adopt_existing": false,
+  "ticket_titles": {},
+  "jira": []
+}
