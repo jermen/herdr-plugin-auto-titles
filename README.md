@@ -10,20 +10,25 @@ can keep that specific task while its window retains the ticket summary.
 
 ## Install
 
-Run inside the Herdr server's machine/session, from this checkout:
+On the machine running the Herdr server:
 
 ```sh
-python3 -B auto_titles.py preview
-herdr plugin link "$PWD"
-herdr plugin enable jermen.auto-titles
+herdr plugin install jermen/herdr-plugin-auto-titles --yes
+herdr plugin action invoke preview --plugin jermen.auto-titles
 herdr plugin action invoke start --plugin jermen.auto-titles
 herdr plugin action invoke status --plugin jermen.auto-titles
 ```
 
+Herdr starts the watcher by itself on later server starts. Reinstalling with
+`herdr plugin install` updates the checkout in place. For development, link a
+clone instead: `herdr plugin uninstall jermen.auto-titles`, then from the clone
+run `python3 -B auto_titles.py preview` and `herdr plugin link "$PWD"`, followed
+by the `start` action.
+
 Disable any other plugin that renames tabs or panes before starting this one.
 It works alongside `jermen.status-indicator`, which displays pane labels without
 owning them. This plugin does not change Herdr's sidebar, terminal output, agent
-settings, or workspace names. Keep the linked checkout on disk.
+settings, or workspace names. A linked development clone must stay on disk.
 
 ## Configuration
 
