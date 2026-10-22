@@ -8,6 +8,12 @@ For `OPS-1425: New plugin`, the window becomes **2 · OPS-1425: New plugin**
 and its pane becomes **New plugin**. A pane reporting `Fix reconnect race`
 can keep that specific task while its window retains the ticket summary.
 
+![Window 1 titled "OPS-1425: Sidebar usage row" and panes titled by their agents' tasks](docs/titles.png)
+
+*The window takes `OPS-1425` from the branch and its summary from `ticket_titles`;
+each pane, and its row in the sidebar, is named after its agent's request. A demo
+session with stand-in agents.*
+
 ## Install
 
 On the machine running the Herdr server:
